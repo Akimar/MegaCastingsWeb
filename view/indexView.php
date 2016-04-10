@@ -5,7 +5,7 @@
 	</head>
 
 	<body>
-		<p> bla </p>
+		<h1> Authentification </h1>
 		<a href="controller/authentication.php" alt="Se Connecter"> Connexion </a>
 	</body>
 

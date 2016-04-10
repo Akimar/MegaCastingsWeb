@@ -1,0 +1,109 @@
+@import "bootstrap\css\bootstrap.css";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+	background: #fff;
+}
+
+body {
+	font-size: 14px;
+	color: #808080;
+	font-weight: normal;
+	line-height: 25px;
+	text-align: center;
+}
+
+p , div
+{
+	font-family : Montserrat, helvetica, arial, sans serif ; 
+	font-size : 18px;
+}
+
+::selection {
+	background: #FC6D6D;
+	color: #FFF;
+}
+::-moz-selection {
+	background: #FC6D6D;
+	color: #FFF;
+}
+
+a {
+	color: #e96656;
+}
+
+a,a:hover {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #cb4332;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin-bottom: 10px;
+	display: block;
+	clear: both;
+}
+
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 18px;
+}
+h5 {
+	font-size: 17px;
+}
+h6 {
+	font-size: 16px;
+}
+
+.buttons {
+	text-align: center;
+	margin-top: 45px;
+}
+.button {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px 35px 10px 35px;
+	border-radius: 4px;
+	margin: 10px;
+}
+
+blockquote {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 300;
+	margin: 24px 40px;
+	line-height: 26px;
+}
+
+.company-details {
+    color: #939393;
+    padding-top: 67px;
+    padding-bottom: 30px;
+}
+
+.copyright {
+    padding-top: 68px;
+    padding-bottom: 68px;
+    background: #555;
+}
