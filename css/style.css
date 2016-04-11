@@ -19,6 +19,16 @@ p , div, blockquote
 	font-size : 18px;
 }
 
+img{
+    position: relative;
+    display: inline-block;
+    margin: 3px;
+}
+
+header{
+    background-color: #d0d0d0;
+}
+
 ::selection {
 	background: #FC6D6D;
 	color: #FFF;
@@ -106,4 +116,16 @@ blockquote {
     padding-top: 68px;
     padding-bottom: 68px;
     background: #555;
+}
+.menu_item{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+.btn-primary{
+    font-size: 28px;
+}
+
+blockquote{
+    border-left: none;
 }
