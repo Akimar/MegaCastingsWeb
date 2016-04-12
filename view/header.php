@@ -14,14 +14,10 @@
    <nav class= "col-md-4">
        <ul>
            <li class = "menu_item"> 
-               <button class = "btn-primary">
-                   Accueil
-               </button>
+                <a class = "btn btn-primary" href="index.php">Accueil</a>
            </li>
            <li class = "menu_item">
-               <button class = "btn-primary" href="controller/authentication.php">
-                   Connexion
-               </button>
+                   <a class = "btn btn-primary" href="controller/authentication.php">Connexion</a>
            </li>
        </ul>
    </nav>

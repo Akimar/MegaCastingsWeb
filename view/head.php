@@ -1,7 +1,7 @@
 
    
 <head>
-    <title>Magecastings</title>
+    <title>Megacastings</title>
     <meta charset='utf-8'/>
 </head>
 
