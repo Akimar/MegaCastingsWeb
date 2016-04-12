@@ -1,5 +1,3 @@
-<!--<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" type="text/css" /> -->
 <header class ="row">
     <div class= "col-md-4">
         <img alt="logo" src="Logo.png" width="200" />
@@ -21,7 +19,7 @@
                </button>
            </li>
            <li class = "menu_item">
-               <button class = "btn-primary">
+               <button class = "btn-primary" href="controller/authentication.php">
                    Connexion
                </button>
            </li>

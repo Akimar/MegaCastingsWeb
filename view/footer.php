@@ -1,7 +1,3 @@
-<html>
-<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-
 <footer>
 	<div class="col-md-6 company-details">
                   <p> Contacts :</p>
@@ -18,4 +14,3 @@
         <p>Réalisé par Merlin Loison & Massamba Sène</p>
     </div>
 </footer>
-</html>
