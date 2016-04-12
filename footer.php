@@ -1,3 +1,4 @@
+<html>
 <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 
@@ -17,3 +18,4 @@
         <p>Réalisé par Merlin Loison & Massamba Sène</p>
     </div>
 </footer>
+</html>

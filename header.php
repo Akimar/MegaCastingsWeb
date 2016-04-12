@@ -1,5 +1,5 @@
-<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<!--<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" type="text/css" /> -->
 <header class ="row">
     <div class= "col-md-4">
         <img alt="logo" src="Logo.png" width="200" />
