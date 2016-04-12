@@ -108,13 +108,13 @@ blockquote {
 
 .company-details {
     color: #939393;
-    padding-top: 67px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .copyright {
-    padding-top: 68px;
-    padding-bottom: 68px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background: #555;
 }
 .menu_item{

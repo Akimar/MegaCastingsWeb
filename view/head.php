@@ -1,5 +1,3 @@
-
-   
 <head>
     <title>Megacastings</title>
     <meta charset='utf-8'/>
