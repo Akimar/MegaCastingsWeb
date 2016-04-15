@@ -2,16 +2,19 @@
 	session_start();
 
 	require_once'../persistence/authenticationQuery.php';
+	require_once'../persistence/commonQuery.php';
 
-	if (!empty($_POST['password']) && !empty($_POST['login']))
+	if (!empty($_POST['psswd']) && !empty($_POST['login']))
 	{
+		// Ouverture de la connexion à la base
+		$db = getDb("megacastings", "root", "formation");
 		
-		$query = Authentication($_POST['login'], hash("sha256", $_POST['password']));
+		$query = Authentication($_POST['login'], hash("sha256", $_POST['psswd']));
 
 		if($query.rowCount())
 		{
 			$_SESSION['IsLogged'] = true;
-			$_SESSION['Log'] = $_POST['login'];
+			$_SESSION['Login'] = $_POST['login'];
 
 			header('location : ../index.php');
 		}
@@ -27,7 +30,7 @@
 	
 		
 
-	
+	var_dump($_SESSION);
 
 
 
