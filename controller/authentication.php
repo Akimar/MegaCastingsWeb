@@ -13,7 +13,6 @@
 
 		if($query.rowCount())
 		{
-			$_SESSION['IsLogged'] = true;
 			$_SESSION['Login'] = $_POST['login'];
 
 			header('location : ../index.php');
@@ -21,7 +20,7 @@
 
 		else
 		{
-			$_SESSION['logError'] = false;
+			// erreur avec login ou password
 		}
 	}
 	

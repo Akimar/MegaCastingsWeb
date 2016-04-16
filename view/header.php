@@ -17,7 +17,21 @@
                 <a class = "btn btn-primary" href="index.php">Accueil</a>
            </li>
            <li class = "menu_item">
-                   <a class = "btn btn-primary" href="controller/authentication.php">Connexion</a>
+                  <?php
+
+                  if(empty($_SESSION['Login']))
+                  {
+                   echo'<a class = "btn btn-primary" href="controller/authentication.php">Connexion</a>';
+                  }
+
+                  else
+                  {
+                    echo'<a class = "btn btn-primary" href="controller/authentication.php">Connexion</a>';
+
+                     echo '<a href="../controller/setPassword.php" alt="Changer mot de passe">Changer son mot de passe<a>';
+                  }
+                   
+                   ?>
            </li>
        </ul>
    </nav>
