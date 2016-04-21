@@ -13,11 +13,12 @@ while ($donnees = $resultat->fetch())
 	echo '<td>' . $donnees['Title'] . '</td>';
 	echo '<td>' . $donnees['Reference'] . '</td>';
 	echo '<td>' . $donnees['PostDescription'] . '</td>';
-	echo '<td><a href="offreview.php?o=' . $donnees['Id'] . '">Lien</a></td>';
+	echo '<td><a href="offerView.php?o=' . $donnees['Id'] . '">Lien</a></td>';
 	
 	echo '</tr>';
 }
 
 $resultat->closeCursor();
+$db = null;
 
 ?>

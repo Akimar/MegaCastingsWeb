@@ -33,6 +33,9 @@
                    
                    ?>
            </li>
+		   <li class = "menu_item"> 
+                <a class = "btn btn-primary" href="view/rss.php">RSS</a>
+           </li>
        </ul>
    </nav>
 
