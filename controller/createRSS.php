@@ -10,19 +10,19 @@
 	$date = date("d-m-Y");
 	echo '<lastBuildDate>';
 	echo $date;
-	echo '</lastBuildDate>';
+	echo '</lastBuildDate>'."\n";
 	
 
 while ($donnees = $resultat->fetch())
 
 {
-	echo '<item>';
+	echo "\t"."\t"."\t".'<item>';
 	
 	echo '<title>'. $donnees['Title'] . '</title>';
 	echo '<description>' . $donnees['PostDescription'] . '</description>';
 	echo '</item>';
 }
-
+echo "\n";
 $resultat->closeCursor();
 $db = null;
 ?>
