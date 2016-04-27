@@ -2,7 +2,7 @@
 	require('persistence/commonQuery.php');
 	$db = getDb('172.16.1.69','megacastings','root','not24get');
 	
-	$requete = "SELECT * FROM castingoffer";
+	$requete = "SELECT * FROM CastingOffer";
 	if (!empty($_GET["name"]))
 	{
 		$requete += "WHERE Title CONTAIN %".$_GET["Recherche"]."%";
