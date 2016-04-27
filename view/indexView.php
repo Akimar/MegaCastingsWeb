@@ -19,14 +19,14 @@
 				</tr>
 			</thead>
 			<p>Parcourir les offres de castings</p>	
-			<form action = 'controller\datagrid.php' method="get">
+			<form action = 'index.php' method="get">
 				Mot clé : 
 				<input type="text" name="Recherche"><br>
 				<input type="submit" value="Rechercher">
 			</form>
 			
 			<tbody>
-				<?php require('controller\datagrid.php'); ?>
+				<?php require('controller/datagrid.php'); ?>
 			</tbody>
 		</table>
 		</div> 

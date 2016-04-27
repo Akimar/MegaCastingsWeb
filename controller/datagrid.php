@@ -1,5 +1,5 @@
 <?php
-	require('persistence\commonQuery.php');
+	require('persistence/commonQuery.php');
 	$db = getDb('172.16.1.69','megacastings','root','not24get');
 	
 	$requete = "SELECT * FROM castingoffer";
@@ -17,7 +17,7 @@ while ($donnees = $resultat->fetch())
 	echo '<td>' . $donnees['Title'] . '</td>';
 	echo '<td>' . $donnees['Reference'] . '</td>';
 	echo '<td>' . $donnees['PostDescription'] . '</td>';
-	echo '<td><a href="offerView.php?Recherche=' . $donnees['Id'] . '">Lien</a></td>';
+	echo '<td><a href="offerView.php?Offer=' . $donnees['Id'] . '">Lien</a></td>';
 	
 	echo '</tr>';
 }
