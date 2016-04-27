@@ -21,7 +21,9 @@
 			// Vérifie si le login entré correspond à un partenaire
 			$query = Exists($db, $_POST['login']);
 
-			if(!$query.rowCount())
+			var_dump($query);
+
+			if(!$query->rowCount())
 			{
 				// login ne correspont à aucune entrée en base
 				echo'<script> alert("pas ok");</script>';
@@ -29,13 +31,15 @@
 			else
 			{
 				// Changement du mot de passe
-				SetPassword($db, $_SESSION['Login'], $_POST['psswd']);
+				SetPassword($db, $_POST['login'], $_POST['psswd']);
 
 				echo'<script> alert("ok");</script>';
 			}
 		}
 		
 	}
+
+	var_dump($_POST);
 
 require '../view/firstPasswordView.php';
 ?>
