@@ -33,14 +33,9 @@
 
 				echo'<script> alert("ok");</script>';
 			}
-
-			
-			
 		}
 		
 	}
-
-
 
 require '../view/firstPasswordView.php';
 ?>

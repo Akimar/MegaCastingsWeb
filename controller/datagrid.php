@@ -3,8 +3,12 @@
 	$db = getDb('172.16.1.69','megacastings','root','not24get');
 	
 	$requete = "SELECT * FROM castingoffer";
+	if (!empty($_GET["name"]))
+	{
+		$requete += "WHERE Title CONTAIN %".$_GET["Recherche"]."%";
+	}
 	$resultat = $db->query($requete);
-
+//faire une fonction 
 while ($donnees = $resultat->fetch())
 
 {
@@ -13,7 +17,7 @@ while ($donnees = $resultat->fetch())
 	echo '<td>' . $donnees['Title'] . '</td>';
 	echo '<td>' . $donnees['Reference'] . '</td>';
 	echo '<td>' . $donnees['PostDescription'] . '</td>';
-	echo '<td><a href="offerView.php?o=' . $donnees['Id'] . '">Lien</a></td>';
+	echo '<td><a href="offerView.php?Recherche=' . $donnees['Id'] . '">Lien</a></td>';
 	
 	echo '</tr>';
 }

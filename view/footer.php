@@ -1,8 +1,6 @@
 <footer>
 	<div class="col-md-6 company-details">
-                  <p> Contacts :</p>
        <div class="col-md-6">
-             
              <a href="mailto:contact@megaproduction.fr">contact@megaproduction.fr</a>
        </div>
         <div class="col-md-6">
@@ -11,6 +9,6 @@
         </div>
     </div>
     <div class="col-md-6 copyright">
-        <p>Réalisé par Merlin Loison & Massamba Sène</p>
+        <p>Réalisé par Olympus</p>
     </div>
 </footer>
