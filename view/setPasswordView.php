@@ -10,10 +10,10 @@
 			<fieldset style="width: 30px;">
 				<legend> Changer son mot de passe</legend>
 
-				<label for="login"> Nouveau mot de passe </label><br/>
+				<label for="psswd"> Nouveau mot de passe </label><br/>
 				<input type="password" name="psswd" id="psswd"/><br/>
 		
-				<label for="mdp"> Confirmer le nouveau mot de passe </label><br/>
+				<label for="cpsswd"> Confirmer le nouveau mot de passe </label><br/>
 				<input type="password" name="cpsswd" id="cpsswd"/><br/><br/>
 
 				<input type="submit" name="setPass" value="Envoyer"/>

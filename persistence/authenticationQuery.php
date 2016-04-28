@@ -15,7 +15,7 @@ function SetPassword($db, $login, $password)
 {
 	$query = $db -> prepare('UPDATE collaborator SET Password = :password WHERE Login = :login');
 	$query-> execute(array(':login' => $login,
-								  ':password' => $password));
+						   ':password' => $password));
 
 }
 

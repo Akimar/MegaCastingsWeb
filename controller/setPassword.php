@@ -5,30 +5,39 @@ session_start();
 	require_once'../persistence/authenticationQuery.php';
 	require_once'../persistence/commonQuery.php';
 
-	if (!empty($_POST['psswd'])  && !empty($_POST['cpsswd']))
+	if(empty($_SESSION['Login']))
 	{
-		$_POST['psswd'] = hash("sha256", $_POST['psswd']);
-		$_POST['cpsswd'] = hash("sha256", $_POST['cpsswd']);
+		header('location: ../index.php');
+	}
 
-		if($_POST['psswd'] != $_POST['cpsswd'])
+	else
+	{
+
+		if (!empty($_POST['psswd'])  && !empty($_POST['cpsswd']))
 		{
-			//mots de passe ne correspondent pas
-		}
+			$_POST['psswd'] = hash("sha256", $_POST['psswd']);
+			$_POST['cpsswd'] = hash("sha256", $_POST['cpsswd']);
 
-		else
-		{
-			// Ouverture de la connexion à la base
-			$db = getDb("megacastings", "root", "formation");
+			if($_POST['psswd'] != $_POST['cpsswd'])
+			{
+				//message d'erreur : mots de passe ne correspondent pas
+			}
 
-			// Changement du mot de passe
-			SetPassword($db, $_SESSION['Login'], $_POST['psswd']);
+			else
+			{
+				// Ouverture de la connexion à la base
+				$db = getDb("127.0.0.1", "megacasting", "root", "formation");
+
+				// Changement du mot de passe
+				SetPassword($db, $_SESSION['Login'], $_POST['psswd']);
+			}
+			
 		}
-		
 	}
 	var_dump($_SESSION);
 	var_dump($_POST);
 
 
-require '../view/managePasswordView.php';
+require '../view/setPasswordView.php';
 ?>
 
