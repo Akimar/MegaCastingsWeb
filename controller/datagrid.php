@@ -3,15 +3,16 @@
 	$db = getDb('172.16.1.69','megacastings','root','not24get');
 	
 	$requete = "SELECT * FROM CastingOffer";
-	if (!empty($_GET["name"]))
+	if (!empty($_GET["Recherche"]))
 	{
-		$requete += "WHERE Title CONTAIN %".$_GET["Recherche"]."%";
+		$requete = $requete." WHERE Title LIKE '%".$_GET["Recherche"]."%'";
 	}
 	$resultat = $db->query($requete);
  
 while ($donnees = $resultat->fetch())
 
 {
+	echo '<br/>';
 	echo '<tr>';
 	
 	echo '<td>' . $donnees['Title'] . '</td>';

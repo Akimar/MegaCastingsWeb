@@ -1,6 +1,6 @@
 <header class ="row">
     <div class= "col-md-4">
-        <img alt="logo" src="/megacastings/Logo.png" width="200" />
+        <a href="/megacastings/index.php"><img alt="logo" src="/megacastings/Logo.png" width="200" /></a>
     </div>
     <div class= "col-md-4">
        <h1>

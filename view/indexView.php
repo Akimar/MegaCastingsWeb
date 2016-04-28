@@ -8,7 +8,16 @@
 		<br/>
 		<div class="table-responsive">
 		<!-- form avec champ de recherches -->
-		<table class="table table-hover table-striped table-bordered">
+		
+		<p>Parcourir les offres de castings</p>	
+		<form action = 'index.php' method="get">
+		Mot clé : 
+		<input type="text" name="Recherche"/>
+		<input type="submit" value="Rechercher"/>
+		</form>
+		<br/>
+		
+		<table class="table table-hover table-striped table-bordered" data-scrollreveal="enter left after 0.15s over 1s">
 			<thead>
 				<tr>
 					<th>Titre</th>
@@ -17,12 +26,6 @@
 					<th>Lien</th>
 				</tr>
 			</thead>
-			<p>Parcourir les offres de castings</p>	
-			<form action = 'index.php' method="get">
-				Mot clé : 
-				<input type="text" name="Recherche"><br>
-				<input type="submit" value="Rechercher">
-			</form>
 			
 			<tbody>
 				<?php require('controller/datagrid.php'); ?>
