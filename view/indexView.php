@@ -1,4 +1,3 @@
-
 <html>
     <?php require('head.php'); ?>
 
@@ -32,7 +31,8 @@
 		</div> 
 		
 		<br/>
-		<?php require('footer.php'); ?>
+		<?php require('footer.php');?>
+		
 	</body>
 
 </html>

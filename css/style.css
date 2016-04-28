@@ -29,6 +29,12 @@ header{
     background-color: #d0d0d0;
 }
 
+footer{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
 ::selection {
 	background: #FC6D6D;
 	color: #FFF;

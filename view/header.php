@@ -1,6 +1,6 @@
 <header class ="row">
     <div class= "col-md-4">
-        <img alt="logo" src="Logo.png" width="200" />
+        <img alt="logo" src="/megacastings/Logo.png" width="200" />
     </div>
     <div class= "col-md-4">
        <h1>
@@ -14,7 +14,7 @@
    <nav class= "col-md-4">
        <ul>
            <li class = "menu_item"> 
-                <a class = "btn btn-primary" href="index.php">Accueil</a>
+                <a class = "btn btn-primary" href="/megacastings/index.php">Accueil</a>
            </li>
            <li class = "menu_item">
                   <?php
@@ -34,7 +34,7 @@
                    ?>
            </li>
 		   <li class = "menu_item"> 
-                <a class = "btn btn-primary" href="view/rss.php">RSS</a>
+                <a class = "btn btn-primary" href="/megacastings/view/rss.php">RSS</a>
            </li>
        </ul>
    </nav>

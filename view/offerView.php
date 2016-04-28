@@ -1,13 +1,12 @@
 <html>
-	<head>
-		<title>Magecastings - Offres</title>
-		<meta charset='utf-8'/>
-	</head>
+	<?php require('head.php'); ?>
 
 	<body>
-		<h1> Offre no </h1>
-		<!-- De quoi trier les annonces -->
+		<?php require('header.php'); ?>
+		<?php require('../controller/Offer.php') ?>
+
 		
+		<?php require('footer.php'); ?>
 	</body>
 
 </html>
