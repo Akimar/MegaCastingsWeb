@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 	require_once'../persistence/authenticationQuery.php';
 	require_once'../persistence/commonQuery.php';
 
@@ -23,7 +25,8 @@
 		}
 		
 	}
-
+	var_dump($_SESSION);
+	var_dump($_POST);
 
 
 require '../view/managePasswordView.php';

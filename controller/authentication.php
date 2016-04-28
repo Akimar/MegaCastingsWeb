@@ -6,26 +6,30 @@
 
 	if (!empty($_POST['psswd']) && !empty($_POST['login']))
 	{
-		// Ouverture de la connexion à la base
-		$db = getDb("megacastings", "root", "formation");
+		$_POST['psswd'] = hash("sha256", $_POST['psswd']);
 		
-		$query = Authentication($_POST['login'], hash("sha256", $_POST['psswd']));
+		// Ouverture de la connexion à la base
+		$db = getDb("127.0.0.1", "megacasting", "root", "formation");
+		
+		$query = Authentication($db, $_POST['login'], hash("sha256", $_POST['psswd']));
 
-		if($query.rowCount())
+		if($query->rowCount())
 		{
 			$_SESSION['Login'] = $_POST['login'];
-
+			
 			header('location : ../index.php');
 		}
 
 		else
 		{
-			// erreur avec login ou password
+			// erreur avec login et/ou password
+			echo'<script> alert("pas ok");</script>';
 		}
 	}
 	
 
 	var_dump($_SESSION);
+	var_dump($_POST);
 
 
 
