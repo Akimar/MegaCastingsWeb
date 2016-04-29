@@ -2,27 +2,37 @@
 
 	require('../persistence/commonQuery.php');
 	
-	$db = getDb('172.16.1.69','megacastings','root','not24get');
+	if(empty($_SESSION['Login']))
+	{
+		header('location: ../view/authenticationView.php');
+	}
+	else
+	{
+		$db = getDb();
 	
-	$requete = "SELECT * FROM castingoffer";
-	$resultat = $db->query($requete);
+		$requete = "SELECT * FROM castingoffer";
+		$resultat = $db->query($requete);
 
-	$date = date("d-m-Y");
-	echo '<lastBuildDate>';
-	echo $date;
-	echo '</lastBuildDate>'."\n";
+		$date = date("d-m-Y");
+		echo '<lastBuildDate>';
+		echo $date;
+		echo '</lastBuildDate>'."\n";
+		
+
+		while ($donnees = $resultat->fetch())
+
+		{
+			echo "\t"."\t"."\t".'<item>';
+			
+			echo '<title>'. $donnees['Title'] . '</title>';
+			echo '<description>' . $donnees['PostDescription'] . '</description>';
+			echo '</item>';
+		}
+		echo "\n";
+		$resultat->closeCursor();
+		$db = null;
+	}
 	
-
-while ($donnees = $resultat->fetch())
-
-{
-	echo "\t"."\t"."\t".'<item>';
 	
-	echo '<title>'. $donnees['Title'] . '</title>';
-	echo '<description>' . $donnees['PostDescription'] . '</description>';
-	echo '</item>';
-}
-echo "\n";
-$resultat->closeCursor();
-$db = null;
+	
 ?>

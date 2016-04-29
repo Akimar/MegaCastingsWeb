@@ -26,7 +26,7 @@ session_start();
 			else
 			{
 				// Ouverture de la connexion à la base
-				$db = getDb("127.0.0.1", "megacasting", "root", "formation");
+				$db = getDb();
 
 				// Changement du mot de passe
 				SetPassword($db, $_SESSION['Login'], $_POST['psswd']);

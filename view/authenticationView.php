@@ -1,12 +1,11 @@
 <html>
-	<head>
-		<title>Authentification</title>
-		<meta charset='utf-8'/>
-	</head>
 
+	<?php require('head.php'); ?>
 	<body>
+		<?php require('header.php'); ?>
+		
 		<form method="post" action="" >
-			<fieldset style="width: 30px;">
+			<fieldset class="centrage">
 				<legend> Authentifiez-vous pour acccéder à vos flux </legend>
 				<label for="login"> Login </label><br/>
 				<input type="text" name="login" id="login"/><br/>
@@ -20,6 +19,7 @@
 				<input type="submit" name="connexion" value="Connexion"/>
 			</fieldset>
 		</form>
+		<?php require('footer.php'); ?>
 	</body>
 
 </html>

@@ -7,8 +7,12 @@
 
 /**** Connexion à la base de données ******/
 
-function getDb($host, $dbname, $user, $pass)
+function getDb()
 {
+	$host = '172.16.1.69';
+	$dbname = 'megacastings';
+	$user = 'root';
+	$pass = 'not24get';
 	$dsn = 'mysql:host='.$host.';dbname='.$dbname;
 	$username = $user;
 	$password = $pass;

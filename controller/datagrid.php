@@ -1,6 +1,6 @@
 <?php
 	require('persistence/commonQuery.php');
-	$db = getDb('172.16.1.69','megacastings','root','not24get');
+	$db = getDb();
 	
 	$requete = "SELECT * FROM CastingOffer";
 	if (!empty($_GET["Recherche"]))

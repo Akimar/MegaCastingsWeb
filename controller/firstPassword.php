@@ -16,7 +16,7 @@
 		else
 		{
 			// Ouverture de la connexion à la base
-			$db = getDb("127.0.0.1", "megacasting", "root", "formation");
+			$db = getDb();
 
 			// Vérifie si le login entré correspond à un partenaire
 			$query = Exists($db, $_POST['login']);
@@ -26,14 +26,14 @@
 			if(!$query->rowCount())
 			{
 				// login ne correspont à aucune entrée en base
-				echo'<script> alert("pas ok");</script>';
+				echo'<script> alert("Login / mot de passe incorrect");</script>';
 			}
 			else
 			{
 				// Changement du mot de passe
 				SetPassword($db, $_POST['login'], $_POST['psswd']);
 
-				echo'<script> alert("ok");</script>';
+				echo'<script> alert("Mot de passe modifié avec succès.");</script>';
 			}
 		}
 		

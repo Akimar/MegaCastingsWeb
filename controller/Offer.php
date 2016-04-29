@@ -6,7 +6,7 @@
 	{
 		try 
 		{  
-			$db = getDb('172.16.1.69','megacastings','root','not24get');
+			$db = getDb();
 			$requete = "SELECT * FROM CastingOffer INNER JOIN Client ON CastingOffer.Client_id = Client.Id INNER JOIN ContractType ON CastingOffer.ContractType_id = ContractType.Id WHERE CastingOffer.Id=".$_GET["Offer"];
 			
 			$resultat = $db->query($requete);

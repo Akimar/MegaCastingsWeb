@@ -9,7 +9,7 @@
 		$_POST['psswd'] = hash("sha256", $_POST['psswd']);
 		
 		// Ouverture de la connexion à la base
-		$db = getDb("127.0.0.1", "megacasting", "root", "formation");
+		$db = getDb();
 		
 		$query = Authentication($db, $_POST['login'], hash("sha256", $_POST['psswd']));
 
