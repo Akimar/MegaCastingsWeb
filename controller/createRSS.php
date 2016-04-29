@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	require('../persistence/commonQuery.php');
 	
 	if(empty($_SESSION['Login']))

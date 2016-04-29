@@ -3,7 +3,6 @@
 
 function Authentication($db, $login, $password)
 {
-
 	$query = $db -> prepare('SELECT * FROM Collaborator WHERE Login = :login AND Password = :password');
 	$query-> execute(array(':login' => $login,
 						   ':password' => $password));

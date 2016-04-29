@@ -1,5 +1,5 @@
 <html>
-	<?php require('head.php'); ?>
+	<?php require('head.php'); session_start();?>
 
 	<body>
 		<?php require('header.php'); ?>

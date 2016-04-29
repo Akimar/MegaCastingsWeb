@@ -1,5 +1,5 @@
 <html>
-    <?php require('head.php'); ?>
+    <?php require('head.php'); session_start();?>
 
 	<body>
 	<?php require('header.php'); ?>
@@ -16,7 +16,7 @@
 		<input type="submit" value="Rechercher"/>
 		</form>
 		<br/>
-		<table class="table table-hover table-striped table-bordered" data-scrollreveal="enter left after 0.15s over 1s">
+		<table class="table table-hover table-striped table-bordered">
 			<thead>
 				<tr>
 					<th>Titre</th>

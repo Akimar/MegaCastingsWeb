@@ -26,9 +26,7 @@
 
                   else
                   {
-                    echo'<a class = "btn btn-primary" href="/megacastings/controller/authentication.php">Connexion</a>';
-
-                     echo '<a href="../controller/setPassword.php" alt="Changer mot de passe">Changer son mot de passe<a>';
+                   echo'<a class = "btn btn-primary" href="/megacastings/controller/disconnection.php">Déconnexion</a>';
                   }
                    
                    ?>

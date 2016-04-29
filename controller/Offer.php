@@ -1,5 +1,5 @@
 <?php
-
+	
 	require('../persistence/commonQuery.php');
 
 	if(!empty($_GET["Offer"]))
