@@ -10,7 +10,7 @@
 	{
 		$db = getDb();
 	
-		$requete = "SELECT * FROM castingoffer";
+		$requete = "SELECT * FROM CastingOffer";
 		$resultat = $db->query($requete);
 
 		$date = date("d-m-Y");
