@@ -21,12 +21,12 @@
 
                   if(empty($_SESSION['Login']))
                   {
-                   echo'<a class = "btn btn-primary" href="controller/authentication.php">Connexion</a>';
+                   echo'<a class = "btn btn-primary" href="/megacastings/controller/authentication.php">Connexion</a>';
                   }
 
                   else
                   {
-                    echo'<a class = "btn btn-primary" href="controller/authentication.php">Connexion</a>';
+                    echo'<a class = "btn btn-primary" href="/megacastings/controller/authentication.php">Connexion</a>';
 
                      echo '<a href="../controller/setPassword.php" alt="Changer mot de passe">Changer son mot de passe<a>';
                   }

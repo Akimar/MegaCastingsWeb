@@ -13,16 +13,16 @@
 			
 			while ($donnees = $resultat->fetch())
 			{
-				echo '<h2>' . $donnees['Title'] . '</h2>';
-				echo '<p>Référence : '.$donnees['Reference']."<br/>";
-				echo 'Date de diffusion : '.$donnees['BroadcastStartingDate']."<br/>";
-				echo 'Date de début de contrat : '.$donnees['ContractStartingDate']."<br/>";
-				echo 'Lieu : '.$donnees['Location']."<br/>";
-				echo 'Nombre de poste : '.$donnees['PostNumber']."<br/>";
-				echo 'Description du poste : '.$donnees['PostDescription']."<br/>";
-				echo 'Profi recherché : '.$donnees['ProfileDescription']."<br/>";
-				echo 'Employeur : '.$donnees['Name']."<br/>";
-				echo 'Type de Contrat : '.$donnees['ConType']."<br/>";
+				echo '<br/><h2>' . $donnees['Title'] . '</h2><br/>';
+				echo '<tr><th>Référence</th><th>'.$donnees['Reference']."</th></tr>";
+				echo '<tr><th>Date de diffusion</th><th>'.$donnees['BroadcastStartingDate']."</th></tr>";
+				echo '<tr><th>Date de début de contrat</th><th>'.$donnees['ContractStartingDate']."</th></tr>";
+				echo '<tr><th>Lieu</th><th>'.$donnees['Location']."</th></tr>";
+				echo '<tr><th>Nombre de poste</th><th>'.$donnees['PostNumber']."</th></tr>";
+				echo '<tr><th>Description du poste</th><th>'.$donnees['PostDescription']."</th></tr>";
+				echo '<tr><th>Profi recherché</th><th>'.$donnees['ProfileDescription']."</th></tr>";
+				echo '<tr><th>Employeur</th><th>'.$donnees['Name']."</th></tr>";
+				echo '<tr><th>Type de Contrat</th><th>'.$donnees['ConType']."</th></tr>";
 				
 				echo '</tr>';
 			}
