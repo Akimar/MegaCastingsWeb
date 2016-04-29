@@ -10,12 +10,11 @@
 		// Ouverture de la connexion à la base
 		$db = getDb();
 		
-		$query = Authentication($db, $_POST['login'], hash("sha256", $_POST['psswd']));
-		if($query->rowCount())
+		$query = Authentication($db, $_POST['login'], hash("sha256", $_POST['psswd']));//appel fonction authentication
+		if($query->rowCount())//si il y a un match login / mdp en base
 		{
-			$_SESSION['Login'] = $_POST['login'];
-			echo'<script> alert("prout");</script>';
-			header('location : ../index.php');
+			$_SESSION['Login'] = $_POST['login'];//login mis en session
+			header('location: ../index.php');//redirection page d'accueil
 		}
 
 		else

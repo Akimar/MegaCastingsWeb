@@ -11,9 +11,9 @@
 			
 			$resultat = $db->query($requete);
 			
-			while ($donnees = $resultat->fetch())
+			while ($donnees = $resultat->fetch())//pour chaque offre
 			{
-				echo '<br/><h2>' . $donnees['Title'] . '</h2><br/>';
+				echo '<br/><h2>' . $donnees['Title'] . '</h2><br/>';//mettre dans tableau
 				echo '<tr><th>Référence</th><th>'.$donnees['Reference']."</th></tr>";
 				echo '<tr><th>Date de diffusion</th><th>'.$donnees['BroadcastStartingDate']."</th></tr>";
 				echo '<tr><th>Date de début de contrat</th><th>'.$donnees['ContractStartingDate']."</th></tr>";

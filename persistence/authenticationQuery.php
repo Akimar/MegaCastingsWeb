@@ -1,6 +1,6 @@
 <?php
 
-
+//requetes préparées pour éviter l'injection
 function Authentication($db, $login, $password)
 {
 	$query = $db -> prepare('SELECT * FROM Collaborator WHERE Login = :login AND Password = :password');

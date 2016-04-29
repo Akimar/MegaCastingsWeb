@@ -9,6 +9,7 @@
 
 function getDb()
 {
+	//identifiants de la base
 	$host = '172.16.1.69';
 	$dbname = 'megacastings';
 	$user = 'root';
