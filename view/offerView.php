@@ -8,6 +8,16 @@
 				<?php require('../controller/Offer.php') ?>
 			</table>
 		</div>
+		<div>
+			 <form method="POST" action="../controller/offer.php" enctype="multipart/form-data">
+	    <div>
+			<input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
+			<input type="file" name="cv" id="cv"/>
+	    </div>
+	    <br/>
+		  <input type="submit" value="Envoyer"/>    
+     </form>
+		</div>
 		<?php require('footer.php'); ?>
 	</body>
 
