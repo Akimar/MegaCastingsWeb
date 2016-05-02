@@ -71,9 +71,11 @@
 				move_uploaded_file($_FILES['cv']['tmp_name'], $fichier);
 
 			}
-		$resultat->closeCursor();
-		$db = null;
+			$resultat->closeCursor();
+			$db = null;
+
 		}
+
 	}
 	else
 	{
