@@ -68,12 +68,12 @@
 			
 				$fichier = $dossier_upload.$donnees['Reference'].basename($_FILES['cv']['name']);
 
-				move_uploaded_file($_FILES['cv']['tmp_name'], $fichier)
+				move_uploaded_file($_FILES['cv']['tmp_name'], $fichier);
 
 			}
 		$resultat->closeCursor();
 		$db = null;
-
+		}
 	}
 	else
 	{

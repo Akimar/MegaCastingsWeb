@@ -137,11 +137,15 @@ blockquote{
 }
 
 .centrage {
-	position: relative; /* on positionne le conteneur */
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50px;
 	text-align: left;
+}
+
+.GrandCentrage {
+	width: 400px;
 }
 
 .Offer {
