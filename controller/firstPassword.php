@@ -39,7 +39,5 @@
 		
 	}
 
-	var_dump($_POST);
-
 require '../view/firstPasswordView.php';
 ?>

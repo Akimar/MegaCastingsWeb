@@ -1,11 +1,9 @@
 <html>
-	<head>
-		<title>Première connexion</title>
-		<meta charset='utf-8'/>
-	</head>
+	<<?php require('head.php'); session_start();?>
 
 	<body>
-		<form method="post" action="" >
+	<?php require('header.php'); ?>
+		<form method="post" action="" class="centrage" >
 			<fieldset style="width: 30px;">
 
 				<legend> Créer votre mot de passe </legend>
@@ -22,6 +20,7 @@
 				<input type="submit" name="connexion" value="Envoyer"/>
 			</fieldset>
 		</form>
+		<?php require('footer.php');?>
 	</body>
 
 </html>

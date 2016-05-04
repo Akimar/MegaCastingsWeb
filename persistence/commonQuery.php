@@ -10,10 +10,10 @@
 function getDb()
 {
 	//identifiants de la base
-	$host = '127.0.0.1';
+	$host = '172.16.1.69';
 	$dbname = 'megacasting';
 	$user = 'root';
-	$pass = 'formation';
+	$pass = 'not24get';
 	$dsn = 'mysql:host='.$host.';dbname='.$dbname;
 	$username = $user;
 	$password = $pass;
