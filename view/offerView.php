@@ -9,7 +9,7 @@
 			</table>
 		</div>
 		<div>
-			<form method="POST" action="../controller/Offer.php" enctype="multipart/form-data">
+			<form method="POST" action="../controller/Upload.php?Offer=<?php echo $_GET["Offer"]?>" enctype="multipart/form-data">
 				<div>
 					<input type="hidden" name="MAX_FILE_SIZE" value="10485760"/>
 					<p>Postuler à cette offre avec votre CV :<input class="centrage GrandCentrage" type="file" name="cv" id="cv"/></p>
