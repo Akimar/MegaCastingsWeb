@@ -1,7 +1,17 @@
 <?php
 	
 	require('../persistence/commonQuery.php');
-
+	if (!empty($_SESSION["uploaded"]))
+	{
+		if ($_SESSION["uploaded"] = true)
+		{
+			echo '<p>Fichier envoyé avec succès</p>';
+		}
+		else if ($_SESSION["uploaded"] = false)
+		{
+			echo '<p>Echec lors de l\'envoie de fichier</p>';
+		}
+	}
 	if(!empty($_GET["Offer"]))
 	{
 		session_start();

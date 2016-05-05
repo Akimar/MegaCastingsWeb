@@ -1,6 +1,8 @@
 <?php
 
 	session_start();
+
+	$_SESSION["uploaded"] = false;
 	// tableau des messages d'erreur pour l'upload de fichiers
 	$a_error=array(
 
@@ -15,12 +17,12 @@
 
 	if(!empty($_FILES['cv']))
 	{
-		if($_FILES['cv']['size'] > 10485760)// vÈrifie la taille du fichier
+		if($_FILES['cv']['size'] > 10485760)// v√©rifie la taille du fichier
 		{
 			echo '<p class="error">Le fichier est trop volumieux (maximum 10 Mo).</p>';
 		}
 
-		else if($_FILES['cv']['error'] != 0)// si l'upload a ÈchouÈ
+		else if($_FILES['cv']['error'] != 0)// si l'upload a √©chou√©
 		{
 
 			echo '<p class="erreur">'.$a_error[$_FILES['cv']['error']].'</p>';
@@ -31,24 +33,25 @@
 		{
 			$dossier_upload = '../upload/';
 
-			if(is_dir($dossier_upload.$_SESSION["Offer"]))
+			if(!is_dir($dossier_upload.$_SESSION["Offer"]))
 			{
-				mkdir($dossier_upload.$_SESSION["Offer"], 0700);
+				mkdir($dossier_upload.$_SESSION["Offer"], 0777);
 			}
 		
 
-			$uploaddir = '../upload/'.$dossier_upload.$_SESSION["Offer"];
-			$uploadfile = $uploaddir . basename($_FILES['cv']['name']);
+			$uploaddir = $dossier_upload.$_SESSION["Offer"].'/';
+			$uploadfile = $uploaddir . date("Y-m-d H:i:s").'.pdf';
 
 			
-			if (move_uploaded_file($_FILES['cv']['tmp_name'], $uploadfile)) {
-				
+			if (move_uploaded_file($_FILES['cv']['tmp_name'], $uploadfile)) 
+			{
+				$_SESSION["uploaded"] = true;
     			header('Location: Offer.php?Offer='.$_SESSION["Offer"]);
 			} 
 			else {
-    			echo "Attaque potentielle par tÈlÈchargement de fichiers.
+    			echo "Attaque potentielle par t√©l√©chargement de fichiers.
           Voici plus d'informations :\n";
-}
+			}
 
 		}
 	}
