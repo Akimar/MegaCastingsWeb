@@ -11,7 +11,7 @@ function getDb()
 {
 	//identifiants de la base
 	$host = '172.16.1.69';
-	$dbname = 'megacasting';
+	$dbname = 'megacastings';
 	$user = 'root';
 	$pass = 'not24get';
 	$dsn = 'mysql:host='.$host.';dbname='.$dbname;

@@ -1,5 +1,6 @@
 <?php
 
+	session_start();
 	// tableau des messages d'erreur pour l'upload de fichiers
 	$a_error=array(
 
@@ -30,17 +31,16 @@
 		{
 			$dossier_upload = '/var/www/html/megacastings/upload/';
 
-			if(is_dir($dossier_upload.$_GET["Offer"]))
+			if(is_dir($dossier_upload.$_SESSION["Offer"]))
 			{
-				mkdir($dossier_upload.$_GET["Offer"], 0700);
+				mkdir($dossier_upload.$_SESSION["Offer"], 0700);
 			}
 		
-			$fichier = $dossier_upload.$_GET["Offer"].basename($_FILES['cv']['name']);
+			$fichier = $dossier_upload.$_SESSION["Offer"].basename($_FILES['cv']['name']);
 
 			move_uploaded_file($_FILES['cv']['tmp_name'], $fichier);
 			
-			header('Location: ../view/offerView.php?Offer='.$_GET["Offer"]);
+			header('Location: Offer.php?Offer='.$_SESSION["Offer"]);
 		}
-
 	}
 ?>

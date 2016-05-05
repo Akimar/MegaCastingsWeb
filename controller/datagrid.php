@@ -18,7 +18,7 @@ while ($donnees = $resultat->fetch())//pour chaque resultat
 	echo '<td>' . $donnees['Title'] . '</td>';
 	echo '<td>' . $donnees['Reference'] . '</td>';
 	echo '<td>' . $donnees['PostDescription'] . '</td>';
-	echo '<td><a href="view/offerView.php?Offer=' . $donnees['Id'] . '">Lien</a></td>';//lien unique de l'offre
+	echo '<td><a href="controller/Offer.php?Offer=' . $donnees['Id'] . '">Lien</a></td>';//lien unique de l'offre
 	
 	echo '</tr>';
 }
