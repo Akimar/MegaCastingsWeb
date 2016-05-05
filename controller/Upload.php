@@ -29,18 +29,27 @@
 		
 		else
 		{
-			$dossier_upload = '/var/www/html/megacastings/upload/';
+			$dossier_upload = '../upload/';
 
 			if(is_dir($dossier_upload.$_SESSION["Offer"]))
 			{
 				mkdir($dossier_upload.$_SESSION["Offer"], 0700);
 			}
 		
-			$fichier = $dossier_upload.$_SESSION["Offer"].basename($_FILES['cv']['name']);
 
-			move_uploaded_file($_FILES['cv']['tmp_name'], $fichier);
+			$uploaddir = '../upload/'.$dossier_upload.$_SESSION["Offer"];
+			$uploadfile = $uploaddir . basename($_FILES['cv']['name']);
+
 			
-			header('Location: Offer.php?Offer='.$_SESSION["Offer"]);
+			if (move_uploaded_file($_FILES['cv']['tmp_name'], $uploadfile)) {
+				
+    			header('Location: Offer.php?Offer='.$_SESSION["Offer"]);
+			} 
+			else {
+    			echo "Attaque potentielle par téléchargement de fichiers.
+          Voici plus d'informations :\n";
+}
+
 		}
 	}
 ?>
